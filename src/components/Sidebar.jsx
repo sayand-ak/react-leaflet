@@ -10,9 +10,10 @@ export default function Sidebar() {
       sx={{  
           boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', 
           width: '20rem', 
-          height: '20rem', 
+          minHeight: '20rem', 
           backgroundColor: "#f4f4f4", 
           position: "absolute", 
+          padding: "30px 0",
           top: '64px', 
           left: 0, 
           zIndex: 100,
@@ -20,7 +21,7 @@ export default function Sidebar() {
       }}
     >
         <Box display={"flex"} flexDirection={"column"} gap={2} alignItems={"center"} justifyContent={"center"} height={"100%"}>
-          {data.split(",").map((data, index) => (
+          {data && data.split(",").map((data, index) => (
             <>
               <Typography key={index}>{data}</Typography>
             </>
